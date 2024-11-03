@@ -1,5 +1,5 @@
 
-const AllGadgets = () => {
+const HomeContent = () => {
     return (
         <div>
             <h2>Update your life with updated Gadgets</h2>
@@ -12,4 +12,4 @@ const AllGadgets = () => {
     );
 };
 
-export default AllGadgets;
+export default HomeContent;
