@@ -1,5 +1,5 @@
 
-const Cart = () => {
+const CartList = () => {
     return (
         <div>
             Products into Cart
@@ -7,4 +7,4 @@ const Cart = () => {
     );
 };
 
-export default Cart;
+export default CartList;

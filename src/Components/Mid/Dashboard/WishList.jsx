@@ -1,5 +1,5 @@
 
-const Wish = () => {
+const WishList = () => {
     return (
         <div>
             Product you Wish
@@ -7,4 +7,4 @@ const Wish = () => {
     );
 };
 
-export default Wish;
+export default WishList;
