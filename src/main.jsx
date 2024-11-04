@@ -9,10 +9,10 @@ import {
 import WebOutline from './Components/WebOutline.jsx';
 import HomeContent from './Components/Mid/Home/HomeContent.jsx';
 import StatsContent from './Components/Mid/Stats/StatsContent.jsx';
-import DashboardContent from './Components/Mid/Dashboard/DashboardBanner.jsx';
 import CartList from './Components/Mid/Dashboard/CartList.jsx';
 import WishList from './Components/Mid/Dashboard/WishList.jsx';
 import PoliciesContent from './Components/Mid/Policies/PoliciesContent.jsx';
+import DashboardContent from './Components/Mid/Dashboard/DashboardContent.jsx';
 // import PoliciesContent from './Components/Mid/Policies/PoliciesContent.jsx'
 
 const router = createBrowserRouter([
@@ -21,15 +21,15 @@ const router = createBrowserRouter([
     element: <WebOutline></WebOutline>,
     children: [
       {
-        path: '/home',
+        path: 'home',
         element: <HomeContent></HomeContent>
       },
       {
-        path: '/stats',
+        path: 'stats',
         element: <StatsContent></StatsContent>
       },
       {
-        path: '/dashboard',
+        path: 'dashboard',
         element: <DashboardContent></DashboardContent>,
         children: [
           {

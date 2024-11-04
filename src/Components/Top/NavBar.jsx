@@ -2,17 +2,15 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
-        <div className="">
-            {/* Navigation */}
-            <div className="flex justify-between absolute text-white max-w-[1200px] w-full mt-10">
+        <div className="navbar px-20 fixed">
                 {/* Nav start */}
-                <div className="ml-20">
+                <div className="navbar-start">
                     {/* Logo */}
                     <a className="font-bold text-2xl">Gadget Heaven</a>
                 </div>
 
                 {/* Nav center */}
-                <div className="hidden lg:flex">
+                <div className="navbar-center hidden lg:flex">
                     {/* Visible Menu */}
                     <ul className="menu menu-horizontal px-1">
                         <li><Link to="/home">Home</Link></li>
@@ -23,7 +21,7 @@ const NavBar = () => {
                 </div>
 
                 {/* Nav end */}
-                <div className="flex">
+                <div className="navbar-end flex">
 
                     {/* Cart */}
                     <div>
@@ -112,7 +110,6 @@ const NavBar = () => {
 
                 </div>
             </div>
-        </div>
     );
 };
 
