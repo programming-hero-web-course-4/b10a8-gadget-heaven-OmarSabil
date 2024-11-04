@@ -1,13 +1,8 @@
-
+import HomeBanner from './HomeBanner'
 const HomeContent = () => {
     return (
         <div>
-            <h2>Update your life with updated Gadgets</h2>
-            <ul className="">
-                <li>Smart phone</li>
-                <li>Smart Watch</li>
-                <li>Accessories</li>
-            </ul>
+            <HomeBanner></HomeBanner>
         </div>
     );
 };

@@ -4,9 +4,9 @@ import FooterContent from './Bottom/Footer'
 
 const WebOutline = () => {
     return (
-        <div>
+        <div className='max-w-[1300px] w-full mx-auto relative'>
             {/* Header */}
-            <header><NavBar></NavBar></header>
+            <header><NavBar /></header>
             {/* Main */}
             <main><Outlet></Outlet></main>
             {/* Footer */}
