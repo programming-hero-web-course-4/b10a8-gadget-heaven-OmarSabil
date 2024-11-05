@@ -22,6 +22,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: 'home',
+        loader: async () => await fetch('/gadgets.json'),
         element: <HomeContent></HomeContent>
       },
       {

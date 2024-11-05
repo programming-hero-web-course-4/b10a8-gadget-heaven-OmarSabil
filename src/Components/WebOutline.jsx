@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import NavBar from './Top/NavBar';
-import FooterContent from './Bottom/Footer'
+// import FooterContent from './Bottom/Footer'
 
 const WebOutline = () => {
     return (
@@ -10,7 +10,7 @@ const WebOutline = () => {
             {/* Main */}
             <main><Outlet></Outlet></main>
             {/* Footer */}
-            <footer><FooterContent></FooterContent></footer>
+            {/* <footer><FooterContent></FooterContent></footer> */}
         </>
     );
 };
