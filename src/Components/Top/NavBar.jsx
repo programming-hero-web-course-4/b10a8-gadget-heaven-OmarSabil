@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
-        <div className="navbar px-32 pt-5 absolute">
+        <div className="navbar px-32 pt-5 absolute top-0">
             {/* Nav start */}
             <div className="navbar-start">
                 {/* Logo */}
