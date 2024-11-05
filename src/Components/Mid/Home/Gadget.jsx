@@ -3,7 +3,7 @@ const Gadget = ({ gadget }) => {
 
     const { product_title, image, price } = gadget;
     return (
-        <div className="p-5 rounded-2xl border shadow-lg">
+        <div className="p-5 rounded-2xl border shadow-lg mb-14">
             <img className="w-full h-[220px] object-cover rounded-xl" src={image} />
             <div className="pt-2">
                 <h4 className="font-bold text-xl py-2">{product_title}</h4>
