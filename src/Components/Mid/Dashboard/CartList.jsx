@@ -25,22 +25,32 @@ const CartList = () => {
         console.log()
     }, [])
 
-    const handleDescendingPrice = () =>{
+    const handleDescendingPrice = () => {
         const sort = cartList.sort((a, b) => b.price - a.price)
         console.log(sort)
     }
-   
+
     const handleOrder = () => {
-        if(isAscending){
+        if (isAscending) {
             const sort = cartList.sort((a, b) => a.price - b.price)
             setSortedCartList(sort)
             setIsAscending(false)
         }
-        else{
+        else {
             const sort = cartList.sort((a, b) => b.price - a.price)
             setSortedCartList(sort)
             setIsAscending(true)
         }
+    }
+    const handlePurchase = () => {
+        const cartList = getStoredCart()
+        if(cartList.length>0){
+            document.getElementById('my_modal_5').showModal()
+        }
+    }
+    const clearPurchase = () => {
+        handlePurchase()
+        localStorage.removeItem('cart-list')
     }
 
     return (
@@ -52,11 +62,29 @@ const CartList = () => {
                     <h3 className="text-xl font-bold">Total Cost: {previousPrice}</h3>
                     {/* buttons */}
                     <div className="flex items-center my-5 gap-2">
-                        <button 
-                        onClick={handleOrder}
-                        className="btn border border-purple-500 text-purple-600 rounded-full hover:bg-purple-600 hover:text-white">Sort with Price <SlidersVertical/></button>
-                        <button className="btn bg-gradient-to-b from-purple-600 to-pink-700 text-white rounded-full hover:border hover:border-purple-500 hover:text-purple-600 hover:bg-none hover:bg-purple-200">Purchase</button>
+                        <button
+                            onClick={handleOrder}
+                            className="btn border border-purple-500 text-purple-600 rounded-full hover:bg-purple-600 hover:text-white">Sort with Price <SlidersVertical /></button>
+                        <button
+                            onClick={clearPurchase}
+                            className="btn bg-gradient-to-b from-purple-600 to-pink-700 text-white rounded-full hover:border hover:border-purple-500 hover:text-purple-600 hover:bg-none hover:bg-purple-200">Purchase</button>
+
+                        {/* modal onclick <Purchase> */}
+                        <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+                            <div className="modal-box">
+                                <h3 className="font-bold text-lg">Hello!</h3>
+                                <p className="py-4">Press ESC key or click the button below to close</p>
+                                <div className="modal-action">
+                                    <form method="dialog">
+                                        {/* if there is a button in form, it will close the modal */}
+                                        <button className="btn">Close</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
+
                     </div>
+
                 </div>
             </div>
             {/* section content */}
