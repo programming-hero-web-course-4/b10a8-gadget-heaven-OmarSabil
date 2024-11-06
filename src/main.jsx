@@ -13,7 +13,8 @@ import CartList from './Components/Mid/Dashboard/CartList.jsx';
 import WishList from './Components/Mid/Dashboard/WishList.jsx';
 import PoliciesContent from './Components/Mid/Policies/PoliciesContent.jsx';
 import DashboardContent from './Components/Mid/Dashboard/DashboardContent.jsx';
-// import PoliciesContent from './Components/Mid/Policies/PoliciesContent.jsx'
+import ProductDetails from './Components/Mid/Home/ProductDetails.jsx';
+// import Details from './Components/Mid/Home/Details.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,16 +22,21 @@ const router = createBrowserRouter([
     element: <WebOutline></WebOutline>,
     children: [
       {
-        path: 'home',
+        path: '/',
         loader: async () => await fetch('/gadgets.json'),
         element: <HomeContent></HomeContent>
       },
       {
-        path: 'stats',
+        path: '/product/:product_id',
+        loader: async () => await fetch('/gadgets.json'),
+        element: <ProductDetails></ProductDetails>
+      },
+      {
+        path: '/stats',
         element: <StatsContent></StatsContent>
       },
       {
-        path: 'dashboard',
+        path: '/dashboard',
         element: <DashboardContent></DashboardContent>,
         children: [
           {

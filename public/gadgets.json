@@ -1,6 +1,6 @@
 [
     {
-        "product_id": "1",
+        "product_id": 1,
         "product_title": "iPhone 14 Pro",
         "category": "Smartphone",
         "brand": "Apple",
@@ -12,7 +12,7 @@
         "description": "Apple's latest smartphone with a stunning OLED display and advanced triple camera system for professional-grade photos."
     },
     {
-        "product_id": "2",
+        "product_id": 2,
         "product_title": "Galaxy S23 Ultra",
         "category": "Smartphone",
         "brand": "Samsung",
@@ -24,7 +24,7 @@
         "description": "Samsung's flagship smartphone featuring a smooth 120Hz display and S-Pen for enhanced productivity."
     },
     {
-        "product_id": "3",
+        "product_id": 3,
         "product_title": "Google Pixel 7 Pro",
         "category": "Smartphone",
         "brand": "Google",
@@ -36,7 +36,7 @@
         "description": "Google's AI-powered smartphone with advanced photography features and built-in Google services."
     },
     {
-        "product_id": "4",
+        "product_id": 4,
         "product_title": "LG OLED C2",
         "category": "TV",
         "brand": "LG",
@@ -48,7 +48,7 @@
         "description": "A top-tier OLED TV with vivid 4K picture quality, perfect for immersive movie and gaming experiences."
     },
     {
-        "product_id": "5",
+        "product_id": 5,
         "product_title": "Samsung QN90B Neo QLED",
         "category": "TV",
         "brand": "Samsung",
@@ -60,7 +60,7 @@
         "description": "A brilliant Neo QLED TV with Quantum HDR for sharp, high-contrast images and built-in Alexa for voice control."
     },
     {
-        "product_id": "6",
+        "product_id": 6,
         "product_title": "Sony Bravia XR A95K",
         "category": "TV",
         "brand": "Sony",
@@ -72,7 +72,7 @@
         "description": "Sony’s advanced OLED TV with stunning visuals, immersive sound, and Google TV integration for seamless streaming."
     },
     {
-        "product_id": "7",
+        "product_id": 7,
         "product_title": "MacBook Air M2",
         "category": "Laptop",
         "brand": "Apple",
@@ -84,7 +84,7 @@
         "description": "Lightweight and powerful, the MacBook Air M2 is designed for efficiency with Apple's latest M2 chip and stunning display."
     },
     {
-        "product_id": "8",
+        "product_id": 8,
         "product_title": "Dell XPS 13 Plus",
         "category": "Laptop",
         "brand": "Dell",
@@ -96,7 +96,7 @@
         "description": "Dell's sleekest laptop with a borderless display and high-performance Intel processor, perfect for multitasking."
     },
     {
-        "product_id": "9",
+        "product_id": 9,
         "product_title": "Surface Laptop 5",
         "category": "Laptop",
         "brand": "Microsoft",
@@ -108,7 +108,7 @@
         "description": "Microsoft's premium laptop with a high-res display and optimized for Windows 11 to maximize productivity."
     },
     {
-        "product_id": "10",
+        "product_id": 10,
         "product_title": "AirPods Pro 2",
         "category": "Accessories",
         "brand": "Apple",
@@ -120,7 +120,7 @@
         "description": "Apple's high-performance earbuds with industry-leading noise cancellation and immersive spatial audio."
     },
     {
-        "product_id": "11",
+        "product_id": 11,
         "product_title": "Galaxy Buds 2 Pro",
         "category": "Accessories",
         "brand": "Samsung",
@@ -132,7 +132,7 @@
         "description": "Samsungs advanced wireless earbuds offering superior sound quality and noise cancellation for all-day comfort."
     },
     {
-        "product_id": "12",
+        "product_id": 12,
         "product_title": "Apple Magic Keyboard",
         "category": "Accessories",
         "brand": "Apple",
@@ -144,7 +144,7 @@
         "description": "A premium keyboard with backlit keys and built-in Touch ID for a seamless and secure typing experience."
     },
     {
-        "product_id": "13",
+        "product_id": 13,
         "product_title": "OnePlus 11",
         "category": "Smartphone",
         "brand": "OnePlus",
@@ -156,7 +156,7 @@
         "description": "OnePlus's latest 5G smartphone with powerful hardware and a smooth 120Hz display for a seamless user experience."
     },
     {
-        "product_id": "14",
+        "product_id": 14,
         "product_title": "Xiaomi 12 Pro",
         "category": "Smartphone",
         "brand": "Xiaomi",
@@ -168,7 +168,7 @@
         "description": "A powerful smartphone with an AMOLED display and super-fast charging, ideal for photography and gaming."
     },
     {
-        "product_id": "15",
+        "product_id": 15,
         "product_title": "Vizio M-Series Quantum",
         "category": "TV",
         "brand": "Vizio",
@@ -180,7 +180,7 @@
         "description": "A mid-range TV with vivid color and contrast, offering an affordable home theater experience with Dolby Vision."
     },
     {
-        "product_id": "16",
+        "product_id": 16,
         "product_title": "HP Spectre x360",
         "category": "Laptop",
         "brand": "HP",
@@ -192,7 +192,7 @@
         "description": "A convertible laptop with a stunning design, great for productivity and creativity on the go."
     },
     {
-        "product_id": "17",
+        "product_id": 17,
         "product_title": "Lenovo ThinkPad X1 Carbon",
         "category": "Laptop",
         "brand": "Lenovo",
@@ -204,7 +204,7 @@
         "description": "A lightweight and durable laptop built for business professionals with unmatched reliability and performance."
     },
     {
-        "product_id": "18",
+        "product_id": 18,
         "product_title": "TCL 6-Series",
         "category": "TV",
         "brand": "TCL",

@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
 
 const Gadget = ({ gadget }) => {
 
-    const { product_title, image, price } = gadget;
+    const { product_title, image, price, product_id } = gadget;
+
+
+
     return (
         <div className="p-5 rounded-2xl border shadow-lg mb-14">
             <img className="w-full h-[220px] object-cover rounded-xl" src={image} />
@@ -9,7 +13,9 @@ const Gadget = ({ gadget }) => {
                 <h4 className="font-bold text-xl py-2">{product_title}</h4>
                 <div className="flex justify-between items-center">
                     <p className="text-gray-600 text-sm">Price: {price}</p>
-                    <button className="btn btn-sm rounded-lg bg-purple-500 text-white hover:text-purple-600 hover:border-purple-600 hover:border-2 hover:bg-white">Show Details</button>
+                    <Link to={`/product/${product_id}`}>
+                        <button className="btn btn-sm rounded-lg bg-purple-500 text-white hover:text-purple-600 hover:border-purple-600 hover:border-2 hover:bg-white">Show Details</button>
+                    </Link>
                 </div>
             </div>
         </div>

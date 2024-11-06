@@ -13,7 +13,7 @@ const NavBar = () => {
             <div className="navbar-center hidden lg:flex">
                 {/* Visible Menu */}
                 <ul className="menu menu-horizontal px-1">
-                    <li><Link to="/home">Home</Link></li>
+                    <li><Link to="/">Home</Link></li>
                     <li><Link to="/stats">Stats</Link></li>
                     <li><Link to="/dashboard">Dashboard</Link></li>
                     <li><Link to="/policies">Policies</Link></li>

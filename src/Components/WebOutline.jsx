@@ -8,9 +8,9 @@ const WebOutline = () => {
             {/* Header */}
             <header><NavBar /></header>
             {/* Main */}
-            <main><Outlet></Outlet></main>
+            <main><Outlet/></main>
             {/* Footer */}
-            <footer><FooterContent></FooterContent></footer>
+            <footer><FooterContent/></footer>
         </div>
     );
 };
