@@ -1,10 +1,17 @@
 import { useLoaderData } from 'react-router-dom';
 import HomeBanner from './HomeBanner'
 import Gadget from './Gadget';
+import { useState } from 'react';
 
 const HomeContent = () => {
+    const [selectedCategory, setSelectedCategory] = useState('all')
+    const [filteredProducts, setFilteredProducts] = useState()
 
     const gadgets = useLoaderData();
+
+    const filterProducts = () => {
+
+    }
 
     // console.log(gadgets)
     return (

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Error = () => {
 
@@ -7,7 +8,8 @@ const Error = () => {
                 <h1 className="font-bold text-7xl mx-auto text-red-600">!! ! Error ! !!</h1>
                 <h3  className="text-3xl font-semibold text-gray-500 my-2">404 Error Occured</h3>
                 <h4>The page you are looking for is not found</h4>
-                {/* <button className="btn">Go Back</button> */}
+                <Link to='/' className="font-bold btn bg-red-600 text-white mt-10">Go Home</Link>
+                
 
             </div>
         </div>

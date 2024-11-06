@@ -19,6 +19,10 @@ import Error from './Components/Error.jsx';
 
 const router = createBrowserRouter([
   {
+    path: '*',
+    element: <Error></Error>
+  },
+  {
     path: '/',
     errorElement: <Error></Error>,
     element: <WebOutline></WebOutline>,
@@ -26,43 +30,37 @@ const router = createBrowserRouter([
       {
         path: '/',
         loader: async () => await fetch('/gadgets.json'),
-        errorElement: <Error></Error>,
         element: <HomeContent></HomeContent>
       },
       {
         path: '/product/:product_id',
         loader: async () => await fetch('/gadgets.json'),
-        errorElement: <Error></Error>,
         element: <ProductDetails></ProductDetails>
       },
       {
         path: '/stats',
-        errorElement: <Error></Error>,
         element: <StatsContent></StatsContent>
       },
       {
         path: '/dashboard',
-        errorElement: <Error></Error>,
         element: <DashboardContent></DashboardContent>,
         children: [
           {
             path: '/dashboard/cart',
             loader: async () => await fetch('/gadgets.json'),
-            errorElement: <Error></Error>,
             element: <CartList></CartList>
           },
           {
             path: '/dashboard/wish',
             loader: async () => await fetch('/gadgets.json'),
-            errorElement: <Error></Error>,
             element: <WishList></WishList>
           }
         ]
       },
       {
         path: '/policies',
-        errorElement: <Error></Error>,
-        element: <PoliciesContent></PoliciesContent>
+        element: <PoliciesContent></PoliciesContent>,
+        loader: async () => await fetch('/policies.json')
       }
     ]
   }

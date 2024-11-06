@@ -5,6 +5,10 @@ import Cart from "./Cart";
 import { SlidersVertical } from "lucide-react";
 
 const CartList = () => {
+
+    const [isAscending, setIsAscending] = useState(false)
+    const [sortedCartList, setSortedCartList] = useState()
+
     const allProducts = useLoaderData()
     const [cartList, setCartList] = useState([])
     const [previousPrice, setPreciousPrice] = useState(0)
@@ -20,7 +24,25 @@ const CartList = () => {
         setPreciousPrice(totalCost)
         console.log()
     }, [])
-    
+
+    const handleDescendingPrice = () =>{
+        const sort = cartList.sort((a, b) => b.price - a.price)
+        console.log(sort)
+    }
+   
+    const handleOrder = () => {
+        if(isAscending){
+            const sort = cartList.sort((a, b) => a.price - b.price)
+            setSortedCartList(sort)
+            setIsAscending(false)
+        }
+        else{
+            const sort = cartList.sort((a, b) => b.price - a.price)
+            setSortedCartList(sort)
+            setIsAscending(true)
+        }
+    }
+
     return (
         <div className="">
             {/* section top */}
@@ -30,7 +52,9 @@ const CartList = () => {
                     <h3 className="text-xl font-bold">Total Cost: {previousPrice}</h3>
                     {/* buttons */}
                     <div className="flex items-center my-5 gap-2">
-                        <button className="btn border border-purple-500 text-purple-600 rounded-full hover:bg-purple-600 hover:text-white">Sort with Price <SlidersVertical/></button>
+                        <button 
+                        onClick={handleOrder}
+                        className="btn border border-purple-500 text-purple-600 rounded-full hover:bg-purple-600 hover:text-white">Sort with Price <SlidersVertical/></button>
                         <button className="btn bg-gradient-to-b from-purple-600 to-pink-700 text-white rounded-full hover:border hover:border-purple-500 hover:text-purple-600 hover:bg-none hover:bg-purple-200">Purchase</button>
                     </div>
                 </div>

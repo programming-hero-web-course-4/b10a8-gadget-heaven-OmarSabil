@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "title": "Return Policy",
+    "description": "We accept returns within 30 days of purchase with the original receipt and packaging.",
+    "conditions": [
+      "Product must be in original condition with all accessories and manuals included.",
+      "Software, opened consumables (like ink cartridges), and clearance items are non-returnable.",
+      "Refunds will be processed to the original payment method within 7-10 business days.",
+      "If the product is defective, customers may request an exchange instead of a refund.",
+      "Items purchased during sales events or promotions may have separate return conditions.",
+      "Return shipping costs are the customer's responsibility unless the item is defective.",
+      "Original packaging must be intact to qualify for a full refund.",
+      "A restocking fee of 10% may apply for items returned without original packaging or accessories."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Warranty Policy",
+    "description": "We provide a standard 1-year warranty covering manufacturer defects and hardware malfunctions.",
+    "conditions": [
+      "The warranty begins on the date of purchase and covers only the original purchaser.",
+      "Physical damage, water damage, and misuse are not covered.",
+      "Accessories and consumables (like batteries and chargers) are excluded unless stated otherwise.",
+      "Proof of purchase is required for warranty claims.",
+      "Customers must contact customer service to initiate a warranty claim.",
+      "Replacement or repair under warranty does not extend the warranty period.",
+      "The warranty is void if repairs are attempted by unauthorized personnel.",
+      "Extended warranty options may be available at the time of purchase for additional coverage."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Repair Policy",
+    "description": "In-store repair services are available for select devices purchased from our store.",
+    "conditions": [
+      "Only devices purchased from our store are eligible for repair services.",
+      "Repairs come with a 90-day warranty on parts and labor.",
+      "Repair times vary based on the device and availability of parts.",
+      "Diagnostic fees may apply if the repair is not covered by warranty.",
+      "Customers will be notified of any repair costs before proceeding.",
+      "Repairs may be delayed if specific parts are not in stock.",
+      "Devices left uncollected for over 30 days after repair completion may incur storage fees.",
+      "Repairs on items damaged by misuse may be declined or subject to additional fees."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Privacy Policy",
+    "description": "We prioritize customer privacy and data security.",
+    "conditions": [
+      "Personal information such as name, email, and billing information is collected for purchase and support purposes.",
+      "Data collected is encrypted and securely stored.",
+      "Data is used only for purchase, warranty, and service support purposes.",
+      "We do not share customer information with third parties unless required by law or for payment processing.",
+      "Customers can opt-out of promotional emails by updating their preferences.",
+      "Cookies are used on our website to improve user experience and analytics.",
+      "Credit card information is processed through secure, third-party payment gateways.",
+      "Customers may request deletion of their personal data by contacting customer support."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Delivery Policy",
+    "description": "We offer delivery options for orders placed online and in-store.",
+    "conditions": [
+      "Standard delivery takes 3-7 business days, depending on location.",
+      "Expedited shipping options are available for an additional fee.",
+      "Free delivery is offered on orders over $100.",
+      "We deliver only within the country and do not ship to P.O. boxes or APO/FPO addresses.",
+      "Customers will receive a tracking number once the order is shipped.",
+      "Signature may be required upon delivery for orders over $500.",
+      "Delivery delays may occur during holidays, sales events, or due to unforeseen circumstances.",
+      "Customers can track their orders through our website using the order ID and tracking number."
+    ]
+  }
+]
