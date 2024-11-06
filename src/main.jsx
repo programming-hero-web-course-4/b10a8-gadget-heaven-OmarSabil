@@ -41,10 +41,12 @@ const router = createBrowserRouter([
         children: [
           {
             path: '/dashboard/cart',
+            loader: async () => await fetch('/gadgets.json'),
             element: <CartList></CartList>
           },
           {
             path: '/dashboard/wish',
+            loader: async () => await fetch('/gadgets.json'),
             element: <WishList></WishList>
           }
         ]

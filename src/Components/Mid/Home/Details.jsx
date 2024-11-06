@@ -1,14 +1,23 @@
 /* eslint-disable react/prop-types */
 
 import { Heart, ShoppingCart } from "lucide-react";
+import { addToStoredCart, addToStoredWish } from "../../../utilities/addToDataBase";
 
 
 const Details = ({ product }) => {
-    const { product_title, brand, price, release_year, features, available, image, description } = product;
+    const { product_id, product_title, brand, price, release_year, features, available, image, description } = product;
+    const id = product_id;
+    const handleAddToCart = (id) => {
+        addToStoredCart(id);
+    }
+    const handleAddToWishlist = (id) => {
+        addToStoredWish(id);
+    }
+
     return (
         <div className="flex gap-10 text-left">
             <div>
-            <img className="w-full h-fit" src={image} />
+                <img className="w-full h-fit" src={image} />
                 <h4 className="text-4xl font-bold">{product_title}</h4>
                 <h5>Price: {price}</h5>
                 <div>
@@ -38,8 +47,16 @@ const Details = ({ product }) => {
                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-purple-600" />
                 </div>
                 <div className="flex gap-2 ">
-                <button className="btn btn-sm bg-purple-600 text-white rounded-full flex gap-2 h-fit hover:border hover:border-purple-500 hover:bg-purple-300 hover:text-purple-700"> <span>Add to Cart</span> <ShoppingCart/></button>
-                <button className="btn btn-sm rounded-full border border-gray-300 text-gray-600 p-1 hover:bg-red-300 hover:text-red-600 hover:border-none" ><Heart className=" hover:fill-red-600" /></button>
+                    {/* btn Cart */}
+                    <button
+                        onClick={() => handleAddToCart(id)}
+                        className="btn btn-sm bg-purple-600 text-white rounded-full flex gap-2 h-fit hover:border hover:border-purple-500 hover:bg-purple-300 hover:text-purple-700"> <span>Add to Cart</span> <ShoppingCart />
+                    </button>
+                    {/* btn Wishlist */}
+                    <button
+                        onClick={() => handleAddToWishlist(id)}
+                        className="btn btn-sm rounded-full border border-gray-300 text-gray-600 p-1 hover:bg-red-300 hover:text-red-600 hover:border-none" ><Heart className=" hover:fill-red-600" />
+                    </button>
                 </div>
             </div>
         </div>

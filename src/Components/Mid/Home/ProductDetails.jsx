@@ -9,9 +9,7 @@ const ProductDetails = () => {
     const data = useLoaderData()
 
     const product = data.find(product => product.product_id === id)
-    const {price} = product
 
-    // console.log(data, product, product_id, id)
     return (
         <div className="pb-[150px] mb-[200px] md:pb-60 md:mb-64 lg:pb-80 lg:mb-[400px]">
             <div className="bg-purple-600 px-16 py-5 text-white text-center mt-20 pb-20">
