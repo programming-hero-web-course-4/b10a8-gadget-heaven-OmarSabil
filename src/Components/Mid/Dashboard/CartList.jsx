@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredCart } from "../../../utilities/addToDataBase";
 import Cart from "./Cart";
-import { SlidersVertical } from "lucide-react";
+import { SlidersVertical, SquareCheckBig } from "lucide-react";
 
 const CartList = () => {
 
@@ -44,7 +44,7 @@ const CartList = () => {
     }
     const handlePurchase = () => {
         const cartList = getStoredCart()
-        if(cartList.length>0){
+        if (cartList.length > 0) {
             document.getElementById('my_modal_5').showModal()
         }
     }
@@ -71,13 +71,15 @@ const CartList = () => {
 
                         {/* modal onclick <Purchase> */}
                         <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
-                            <div className="modal-box">
-                                <h3 className="font-bold text-lg">Hello!</h3>
-                                <p className="py-4">Press ESC key or click the button below to close</p>
-                                <div className="modal-action">
-                                    <form method="dialog">
-                                        {/* if there is a button in form, it will close the modal */}
-                                        <button className="btn">Close</button>
+                            <div className="modal-box text-center">
+                                {/* <SquareCheckBig className="text-green-500 mx-auto" size={100} /> */}
+                                <SquareCheckBig className="text-emerald-500 mx-auto" size={150} strokeWidth={3} />
+                                <h3 className="font-bold text-emerald-600">Order Confirmed</h3>
+                                <h2 className="font-bold text-3xl text-gray-700 mt-5">!! Thank You !!</h2>
+                                <p className="py-2 text-sm text-gray-500">..You are precious for us. Your orders will keep us togather. Therefore, everytime you are in need, we will be there for you..</p>
+                                <div className="modal-action flex justify-center">
+                                    <form method="dialog" className="w-full">
+                                        <button className="btn w-full border-emerald-400 hover:bg-emerald-600 hover:text-white text-emerald-600 bg-emerald-100 font-bold text-2xl">Close</button>
                                     </form>
                                 </div>
                             </div>
