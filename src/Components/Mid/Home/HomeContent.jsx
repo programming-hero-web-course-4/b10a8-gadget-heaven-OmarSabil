@@ -15,12 +15,12 @@ const HomeContent = () => {
 
     // console.log(gadgets)
     return (
-        <div className='px-14'>
+        <div className='px-5 lg:px-14'>
             <HomeBanner></HomeBanner>
             <h3 className='text-3xl font-bold w-fit mx-auto mb-10'>Explore Cutting-Edge Gadgets</h3>
             <section className='flex gap-5'>
                 <div>
-                <div className='flex md:static flex-col w-fit gap-2 p-2 border border-black rounded-2xl h-fit sticky top-0'>
+                <div className='flex flex-col w-fit gap-2 p-2 border border-black rounded-2xl h-fit sticky top-0'>
                     <button onClick={() => setSelectedCategory('all')} className='btn btn-xs  md:btn-sm w-full border border-black rounded-full'>All</button>
                     <button onClick={() => setSelectedCategory('Smartphone')} className='btn btn-xs  md:btn-sm w-full border border-black rounded-full'>Smartphone</button>
                     <button onClick={() => setSelectedCategory('Laptop')} className='btn btn-xs  md:btn-sm w-full border border-black rounded-full'>Laptop</button>

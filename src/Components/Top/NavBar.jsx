@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
+
     return (
         <div className="navbar px-10 md:px-28 lg:px-32 pt-5 md:absolute top-0">
             {/* Nav start */}
