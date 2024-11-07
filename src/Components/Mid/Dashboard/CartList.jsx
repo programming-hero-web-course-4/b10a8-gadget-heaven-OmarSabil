@@ -53,6 +53,7 @@ const CartList = () => {
         // handlePurchase()
         localStorage.removeItem('cart-list') 
         setCartList([])
+        setPreciousPrice([0])
         toast('Order Placed Successfully!', {
             icon: '👏',
           });
