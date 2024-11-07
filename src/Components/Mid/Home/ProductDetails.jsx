@@ -11,7 +11,7 @@ const ProductDetails = () => {
     const product = data.find(product => product.product_id === id)
 
     return (
-        <div className="pb-[150px] mb-[200px]">
+        <div className="pb-[150px] mb-[500px] md:mb-[600px] lg:mb-[200px]">
             <div className="bg-purple-600 px-16 py-5 text-white text-center mt-20 pb-60">
                 <div className='mt-10 relative'>
                     <h1 className="w-11/12 font-bold text-3xl md:text-4xl lg:text-5xl mx-auto">Product Details of {product_id}</h1>
@@ -19,7 +19,7 @@ const ProductDetails = () => {
                     <div className='flex justify-center'>
 
                         {/* Details */}
-                        <div className='md:w-11/12 p-5 text-black bg-gray-100 rounded-3xl border-2 border-black mx-auto mt-5 absolute'>
+                        <div className='w-11/12 p-5 text-black bg-gray-100 rounded-3xl border-2 border-black mx-auto mt-5 absolute'>
                             <Details key={product_id} product={product}/>
                         </div>
                     </div>

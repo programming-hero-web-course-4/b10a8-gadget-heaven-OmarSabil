@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
-        <div className="navbar px-32 pt-5 absolute top-0">
+        <div className="navbar px-10 md:px-28 lg:px-32 pt-5 md:absolute top-0">
             {/* Nav start */}
             <div className="navbar-start">
                 {/* Logo */}
@@ -24,7 +24,7 @@ const NavBar = () => {
             <div className="navbar-end flex">
 
                 {/* Cart */}
-                <div>
+                <div className="hidden md:flex">
                     {/* cart btn */}
                     <div className="dropdown dropdown-end">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -60,7 +60,7 @@ const NavBar = () => {
                 </div>
 
                 {/* Wishlist */}
-                <div className="dropdown dropdown-end">
+                <div className="dropdown dropdown-end hidden md:flex">
                     {/* wishlist btn */}
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
                         <div className="indicator">

@@ -15,8 +15,8 @@ const Details = ({ product }) => {
     }
 
     return (
-        <div className="flex text-left gap-10">
-            <img className="w-[500px] h-[fit] o rounded-xl mx-auto" src={image} />
+        <div className="flex flex-col items-center lg:flex-row text-left gap-10 md:p-2">
+            <img className="w-full lg:w-[500px] lg:h-full md:max-h-[450px] md:h-9/12 rounded-xl mx-auto md:object-center" src={image} />
             <div className="w-fit">
                 <h4 className="text-3xl font-bold">{product_title}</h4>
                 <h5 className="text-xl font-semibold text-gray-600">Price: {price}</h5>
@@ -24,13 +24,13 @@ const Details = ({ product }) => {
                     !available ? <p className="btn btn-xs rounded-full bg-red-100 text-red-600 border border-red-600">Stock Out</p> : <p className="btn btn-xs rounded-full bg-green-200 text-green-800 border border-green-800">In Stock</p>
                 }
 
-                <p className="text-gray-600">{description}</p>
+                <p className="text-gray-600 mt-2">{description}</p>
                 <div>
 
                     {/* infos */}
                     <div className="py-2">
-                        <p>Brand: {brand}</p>
-                        <p>Released: {release_year}</p>
+                        <p><span className="font-semibold">Brand:</span> {brand}</p>
+                        <p><span className="font-semibold">Released:</span> {release_year}</p>
                     </div>
                     {/* specefication */}
                     <div>
