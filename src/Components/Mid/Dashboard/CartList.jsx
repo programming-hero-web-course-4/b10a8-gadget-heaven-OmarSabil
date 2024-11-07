@@ -3,13 +3,14 @@ import { useLoaderData } from "react-router-dom";
 import { getStoredCart } from "../../../utilities/addToDataBase";
 import Cart from "./Cart";
 import { SlidersVertical, SquareCheckBig } from "lucide-react";
+import { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 const CartList = () => {
+    const allProducts = useLoaderData()
 
     const [isAscending, setIsAscending] = useState(false)
     const [sortedCartList, setSortedCartList] = useState()
-
-    const allProducts = useLoaderData()
     const [cartList, setCartList] = useState([])
     const [previousPrice, setPreciousPrice] = useState(0)
 
@@ -49,12 +50,18 @@ const CartList = () => {
         }
     }
     const clearPurchase = () => {
-        handlePurchase()
-        localStorage.removeItem('cart-list')
+        // handlePurchase()
+        localStorage.removeItem('cart-list') 
+        setCartList([])
+        toast('Order Placed Successfully!', {
+            icon: '👏',
+          });
+          
     }
 
     return (
         <div className="">
+            <Toaster/>
             {/* section top */}
             <div className="px-10 flex justify-between items-center">
                 <h3 className="text-xl font-bold">Cart List</h3>
@@ -66,7 +73,7 @@ const CartList = () => {
                             onClick={handleOrder}
                             className="btn border border-purple-500 text-purple-600 rounded-full hover:bg-purple-600 hover:text-white">Sort with Price <SlidersVertical /></button>
                         <button
-                            onClick={clearPurchase}
+                        onClick={handlePurchase}
                             className="btn bg-gradient-to-b from-purple-600 to-pink-700 text-white rounded-full hover:border hover:border-purple-500 hover:text-purple-600 hover:bg-none hover:bg-purple-200">Purchase</button>
 
                         {/* modal onclick <Purchase> */}
@@ -79,7 +86,8 @@ const CartList = () => {
                                 <p className="py-2 text-sm text-gray-500">..You are precious for us. Your orders will keep us togather. Therefore, everytime you are in need, we will be there for you..</p>
                                 <div className="modal-action flex justify-center">
                                     <form method="dialog" className="w-full">
-                                        <button className="btn w-full border-emerald-400 hover:bg-emerald-600 hover:text-white text-emerald-600 bg-emerald-100 font-bold text-2xl">Close</button>
+                                        <button className="btn w-full border-emerald-400 hover:bg-emerald-600 hover:text-white text-emerald-600 bg-emerald-100 font-bold text-2xl"
+                                        onClick={clearPurchase}>Close</button>
                                     </form>
                                 </div>
                             </div>

@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
+import toast from "react-hot-toast";
 
 
 // Cart
@@ -18,11 +19,13 @@ const addToStoredCart = (id) => {
     const storedListCart = getStoredCart();
     if (storedListCart.includes(id)) {
         console.log(id, 'Already exist in this list')
+        toast.error('Already added to your cart!')
     }
     else {
         storedListCart.push(id);
         const storedCartStr = JSON.stringify(storedListCart);
         localStorage.setItem('cart-list', storedCartStr);
+        toast.success('Successfully added to your cart!')
     }
 }
 
@@ -42,11 +45,13 @@ const addToStoredWish = (id) => {
     const storedListWish = getStoredWishList();
     if (storedListWish.includes(id)) {
         console.log(id, 'Already exist in this list')
+        toast.error('Already added to your wishlist!')
     }
     else {
         storedListWish.push(id);
         const storedWishStr = JSON.stringify(storedListWish);
         localStorage.setItem('wish-list', storedWishStr);
+        toast.success('Successfully added to your wishlist!')
     }
 }
 

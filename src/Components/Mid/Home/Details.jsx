@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 
 import { Heart, ShoppingCart } from "lucide-react";
-import { addToStoredCart, addToStoredWish } from "../../../utilities/addToDataBase";
+import { addToStoredCart, addToStoredWish, getStoredCart } from "../../../utilities/addToDataBase";
+import { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 
 const Details = ({ product }) => {
@@ -16,6 +18,10 @@ const Details = ({ product }) => {
 
     return (
         <div className="flex flex-col items-center lg:flex-row text-left gap-10 md:p-2">
+            <Toaster
+            position="top-right"
+            reverseOrder={false}
+          />
             <img className="w-full lg:w-[500px] lg:h-full md:max-h-[450px] md:h-9/12 rounded-xl mx-auto md:object-center" src={image} />
             <div className="w-fit">
                 <h4 className="text-3xl font-bold">{product_title}</h4>
